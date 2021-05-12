@@ -32,8 +32,8 @@
               			href="formulario.jsp?page=formulario">Formulario Alta</a>
                   </li>
                   <li class="nav-item">
-           			<a class="nav-link" 
-             			 href="calculadora.jsp">Calculadora</a>
+           			<a class="nav-link <%= ( "calculadora".equals(pagina) ) ? "active" : "" %>" 
+              			href="calculadora.jsp?page=calculadora">Calculadora</a>
          </li>
                 </ul>
               </div>

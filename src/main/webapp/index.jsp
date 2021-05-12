@@ -7,7 +7,7 @@
         <label for="nombre" class="form-label">Nombre de Usuario</label>
         <input type="text" name="nombre" required autofocus class="form-control" placeholder="Tu email o numero de telefono"><br>
         
-        <label for="password" class="form-label">ContraseÃ±a</label>
+        <label for="password" class="form-label">Contraseña</label>
         <input type="password" name="contrasenia" required class="form-control" placeholder="Minimo 6 max 8"><br>
         
         <input type="submit" value="Enviar" class="btn btn-block btn-primary mt-4">

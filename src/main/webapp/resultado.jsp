@@ -1,14 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
+<jsp:include page="plantillas/cabecera.jsp"></jsp:include>
+<jsp:include page="plantillas/menu.jsp"></jsp:include>
+
 <meta charset="ISO-8859-1">
 <title>Resultado</title>
-</head>
-<body>
+	<div class="container w-25">
+	<h1 >El resultado de la ${op} es ${resultado}</h1>
+	<a href="calculadora.jsp">Volver</a>
+	
+	</div>
 
-	El resultado de la suma es ${resultado}
 
-</body>
-</html>
+
+
+<jsp:include page="plantillas/footer.jsp"></jsp:include>

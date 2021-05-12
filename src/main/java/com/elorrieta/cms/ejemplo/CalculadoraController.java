@@ -52,19 +52,49 @@ public class CalculadoraController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		// recoger PARAMETROS, CUIDADO siempre son String
-		int numero1 = Integer.parseInt(request.getParameter("numero1"));
-		int numero2 = Integer.parseInt(request.getParameter("numero2"));
+		try {
+			// recoger PARAMETROS, CUIDADO siempre son String
+			int numero1 = Integer.parseInt(request.getParameter("numero1"));
+			int numero2 = Integer.parseInt(request.getParameter("numero2"));
+			String op = request.getParameter("operacion");
+			int resultado = 0;
+			// logica de negocio
+			switch (op) {
+			case "s": {
+				resultado = numero1 + numero2;
+				request.setAttribute("op", "suma");
+				break;
+			}
+			case "r": {
+				resultado = numero1 - numero2;
+				request.setAttribute("op", "resta");
+				break;
+			}
+			case "m": {
+				resultado = numero1 * numero2;
+				request.setAttribute("op", "multiplicacion");
+				break;
+			}
+			case "d": {
+				resultado = numero1 / numero2;
+				request.setAttribute("op", "division");
+				break;
+			}
+			default:
+				break;
+			}
 
-		// logica de negocio
-		int suma = numero1 + numero2;
+			// Enviar ATRIBUTOS a la JSP
+			request.setAttribute("resultado", resultado);
 
-		// Enviar ATRIBUTOS a la JSP
-		request.setAttribute("resultado", suma);
+			// IR a la JSP resultado.jsp
+			request.getRequestDispatcher("resultado.jsp").forward(request, response);
 
-		// IR a la JSP resultado.jsp
-		request.getRequestDispatcher("resultado.jsp").forward(request, response);
+		} catch (Exception e) {
+			request.setAttribute("mensaje", "Por favor escribe numeros");
+			request.getRequestDispatcher("calculadora.jsp").forward(request, response);
+		}
 
 	}
 
-} 
+}
