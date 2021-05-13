@@ -6,7 +6,7 @@
 <meta charset="ISO-8859-1">
 <title>Resultado</title>
 	<div class="container w-25">
-	<h1 >El resultado de la ${op} es ${resultado}</h1>
+	<h2 >El resultado de la ${op} es ${resultado}</h2>
 	<a href="calculadora.jsp">Volver</a>
 	
 	</div>

@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <%
 	// < %  % >  estos simbolos son para escribir en java, se llama Scriplet, puede haber mas de una linea
 	// Esto es codigo Java, se ejecuta en el Servidor, no en el Navegador
@@ -39,3 +41,10 @@
               </div>
         </div>
     </nav>
+    
+   <c:if test="${mensaje != null}" >
+	<div class="alert alert-danger alert-dismissible fade show" role="alert">
+	  ${mensaje}
+	  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+</c:if>	

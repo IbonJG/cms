@@ -3,7 +3,7 @@
 
     <div class="container w-50">
     <h1>Iniciar Sesion</h1>
-    <form action="#" method="POST">
+    <form action="login" method="POST">
         <label for="nombre" class="form-label">Nombre de Usuario</label>
         <input type="text" name="nombre" required autofocus class="form-control" placeholder="Tu email o numero de telefono"><br>
         
